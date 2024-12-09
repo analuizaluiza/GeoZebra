@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoZebra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../img/Logo_Header.png" type="image/png">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body class="main-body">
+    <header class="header">
+        <img src="../img/Logo_Header.png" alt="GeoZebra Logo" class="header-logo">
+        <nav class="header-nav">
+            <a href="index.html" class="header-link" onclick="localStorage.removeItem('modificarProblema');">Início</a>
+        </nav>
+    </header>
+
+    <!-- Contêiner para os botões alinhados -->
+    <div class="botoes-container">
+        <a href="principal.html" class="novobtn btn-novo-problema" onclick="localStorage.removeItem('modificarProblema');">Novo Problema</a>
+        <button id="modificarProblemaBtn" class="modificarbtn btn-modificar-problema">Modificar Problema</button>
+    </div>
+
+    <main>
+        <h3>Solução Gráfica</h3>
+        <div id="alerta-multipla" style="color: red; font-weight: bold;"></div>
+        <div id="grafico"></div>
+
+        <div id="grafico"></div>
+        <table id="tabela-restricoes"></table>
+    </main>
+
+    <footer class="footer">
+        Copyright © GeoZebra 2024
+    </footer>
+
+    <script src="../js/grafico.js"></script>
+    <script>
+        document.getElementById('modificarProblemaBtn').addEventListener('click', function () {
+            // Define no localStorage a intenção de modificar o problema
+            localStorage.setItem('modificarProblema', 'true');
+            window.location.href = 'principal.html';
+        });
+    </script>
+</body>
+</html>

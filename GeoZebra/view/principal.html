@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GeoZebra</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="../img/Logo_Header.png" type="image/png">
+    </head>
+<body class="main-body">
+    <header class="header">
+        <img src="../img/Logo_Header.png" alt="GeoZebra Logo" class="header-logo">
+        <nav class="header-nav">
+            <a href="index.html" class="header-link">Início</a>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <div class="input-group">
+            <label>Qtde. Variáveis</label>
+            <input type="number" id="qtdVariaveis" value="1" class="input-rounded" min="1">
+        </div>
+        <div class="input-group">
+            <label>Qtde. Restrições</label>
+            <input type="number" id="qtdRestricoes" value="1" class="input-rounded" min="1">
+        </div>
+        <button id="confirmarBtn" class="btn">Confirmar</button>
+    </div>
+
+    <div id="tabela-container" class="tabela-container"></div>
+
+    <script src="../js/tabela.js"></script>
+
+    <footer class="footer">
+        Copyright © GeoZebra 2024
+    </footer>
+    
+    <!-- Script para carregar a tabela preenchida quando "Modificar Problema" é clicado -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Verifica se a chave 'modificarProblema' está presente no localStorage
+            if (localStorage.getItem('modificarProblema') === 'true') {
+                const qtdVariaveis = localStorage.getItem('qtdVariaveis');
+                const qtdRestricoes = localStorage.getItem('qtdRestricoes');
+    
+                if (qtdVariaveis && qtdRestricoes) {
+                    // Preenche os campos de quantidade de variáveis e restrições
+                    document.getElementById('qtdVariaveis').value = qtdVariaveis;
+                    document.getElementById('qtdRestricoes').value = qtdRestricoes;
+    
+                    // Simula o clique no botão "Confirmar" para gerar a tabela com os inputs
+                    document.getElementById('confirmarBtn').click();
+    
+                    // Carrega os valores do localStorage para preencher a tabela
+                    const tipoObjetivo = localStorage.getItem('tipoObjetivo');
+                    const coefObjetivo = JSON.parse(localStorage.getItem('coefObjetivo'));
+                    const restricoes = JSON.parse(localStorage.getItem('restricoes'));
+    
+                    // Define o tipo de objetivo
+                    document.getElementById('tipoObjetivo').value = tipoObjetivo;
+    
+                    // Preenche os coeficientes da função objetivo
+                    coefObjetivo.forEach((valor, i) => {
+                        document.getElementById(`coefObjetivo${i + 1}`).value = valor;
+                    });
+    
+                    // Preenche as restrições
+                    restricoes.forEach((restricao, i) => {
+                        restricao.coef.forEach((valor, j) => {
+                            document.getElementById(`coefRestricao${i + 1}_${j + 1}`).value = valor;
+                        });
+                        document.getElementById(`operadorRestricao${i + 1}`).value = restricao.operator;
+                        document.getElementById(`rhsRestricao${i + 1}`).value = restricao.rhs;
+                    });
+                }
+    
+                // Remove a chave para evitar carregamento não intencional em visitas futuras
+                localStorage.removeItem('modificarProblema');
+            }
+        });
+    </script>
+    
+    
+    
+</body>
+</html>

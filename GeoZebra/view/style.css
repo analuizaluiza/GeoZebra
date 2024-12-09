@@ -1,0 +1,585 @@
+/*******************************************INDEX*******************************************/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1F1F1F;
+    color: #FEFBF2;
+    display: flex;
+    flex-direction: column; /* Organiza em coluna */
+    min-height: 100vh; /* Garante altura total da tela */
+}
+
+.index-content {
+    flex: 1; /* Ocupa o espaço disponível entre o topo e o rodapé */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Itens lado a lado */
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Largura adaptável */
+    max-width: 1200px; /* Largura máxima para telas maiores */
+    gap: 2em; /* Espaço flexível entre elementos */
+}
+
+.logo {
+    width: 520px;
+    margin-left: -45px;
+}
+
+.text-section {
+    text-align: center; /* Alinhando o texto e os botões ao centro */
+    margin-left: -500px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 150px;
+    margin: 0 50px 50px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #FEFBF2;
+    color: #1F1F1F;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+    width: 250px; /* Largura botões */
+}
+
+.btn:hover {
+    background-color: #1F1F1F;
+    color: #FEFBF2;
+    border: 2px solid #FEFBF2;
+}
+
+
+/*******************************************RODAPÉ*******************************************/
+
+.footer {
+    color: #FEFBF2; /* Cor clara do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Maior espaçamento vertical */
+    width: 100%; /* Largura total */
+    font-size: 0.9rem; /* Tamanho ajustado para telas pequenas */
+    background-color: #2A2A2A; /* Fundo para diferenciar */
+    margin-top: auto; /* Empurra o rodapé para o fim */
+    
+}
+
+
+/*******************************************HEADER*******************************************/
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #1F1F1F;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #FEFBF2; /* borda inferior */
+}
+
+.header-logo {
+    width: 50px; 
+    margin-right: 15px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-link {
+    color: #FEFBF2;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-left: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.8s ease;
+}
+
+.header-link:hover {
+    border-bottom: 2px solid #FEFBF2;
+}
+
+
+/*******************************************SOBRE*******************************************/
+
+.sobre-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que ocupe a tela toda */
+    box-sizing: border-box; /* Inclui o padding no cálculo do tamanho */
+    padding: 100px 20px 0; /* Espaçamento no topo */
+    
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1F1F1F;
+    color: #FEFBF2;
+}
+
+.main-content.sobre-body {
+    flex: 1; /* Ocupa o espaço disponível entre o topo e o rodapé */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Remove centralização vertical desnecessária */
+}
+
+.about {
+    max-width: 1400px; /* Limita a largura máxima */
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box; /* Inclui o padding */
+}
+
+.h1-sobre{
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 25px;
+    text-align: center;
+    line-height: 1.4; 
+    margin-bottom: -35px; /* Reduz o espaço abaixo do parágrafo */
+}
+
+.image-gallery {
+    display: flex;
+    margin-top: 30px; /* Espaçamento em relação ao texto acima */
+    column-gap: 150px; /* Espaçamento horizontal entre as colunas */
+    padding: 0; /* Remove possíveis espaçamentos internos */
+}
+
+/* Estilização de cada item (foto e nome) */
+.photo-item {
+    text-align: center;
+    margin: 0; /* Remove possíveis margens entre itens */
+    padding: 0; /* Remove padding */
+}
+
+/* Fotos quadradas */
+.photo {
+    width: 220px; /* Largura fixa */
+    height: 220px; /* Altura fixa, garantindo que sejam quadradas */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem deformar */
+    border-radius: 10px; /* Bordas levemente arredondadas */
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+/* Nome abaixo da foto */
+.photo-name {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FEFBF2;
+    text-transform: capitalize;
+}
+
+.center{
+    justify-items: center; /* Centraliza os itens no grid */
+}
+
+h2{
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 42px; /* Reduz o espaço abaixo */
+}
+
+/*******************************************TABELA*******************************************/
+
+.main-body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1F1F1F;
+    color: #FEFBF2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinhando no topo */
+    align-items: center;
+    padding-top: 100px; /* Adiciona espaço para o topo, abaixo do header */
+    min-height: 89.5vh; /* Garante altura total da tela */
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex; /* Flex para alinhar o texto e o input lado a lado */
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* Espaçamento entre o texto e o input */
+}
+
+.input-group label {
+    margin: 0; /* Remove o espaçamento superior e inferior do label */
+    font-size: 1.5rem; /* Tamanho do texto */
+}
+
+#confirmarBtn {
+    background-color: #FEFBF2;
+    color: #1F1F1F;
+    border-radius: 30px;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 100px;
+}
+
+#confirmarBtn:hover {
+    background-color: #1F1F1F;
+    color: #FEFBF2;
+}
+
+/* Ajuste para inputs dentro da tabela */
+.custom-input {
+    background-color: transparent; /* Remove o fundo */
+    color: #FEFBF2; /* Cor do texto */
+    border: none; /* Remove bordas */
+    width: 100%; /* Preenche o espaço da célula */
+    text-align: center; /* Texto centralizado */
+    font-size: 20px;
+    outline: none; /* Remove o foco */
+    padding: 0;
+    box-sizing: border-box;
+    height: 30px;
+}
+
+.custom-input:focus {
+    outline: none; /* Remove o destaque quando o campo estiver em foco */
+}
+
+/* Estilo do select para alinhar com a tabela */
+.custom-select {
+    background-color: transparent;
+    color: #FEFBF2;
+    border: none;
+    text-align: center;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.custom-select option {
+    color: #000; /* Cor do texto das opções quando o select for aberto */
+}
+
+/* Estilo para a tabela em si */
+.table-inicial {
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    color: #FEFBF2; /* Cor do texto padrão */
+}
+
+.table-inicial th, .table-inicial td {
+    border: 1px solid #FEFBF2;
+    padding: 10px;
+}
+
+.table-inicial th {
+    background-color: #333;
+    color: #FEFBF2;
+}
+
+
+/* Estilo para os inputs arredondados apenas na parte superior */
+.input-rounded {
+    width: 100px; /* Ajuste conforme necessário */
+    height: 26px;
+    padding: 8px;
+    border-radius: 20px; /* Deixa os cantos arredondados */
+    border: 1px solid #FEFBF2; /* Borda clara */
+    background-color: transparent; /* Fundo transparente */
+    color: #1F1F1F; /* Cor do texto */
+    text-align: center;
+    outline: none; /* Remove a borda de foco padrão */
+    background-color: #FEFBF2;
+    font-size: 25px;
+}
+
+.input-rounded:focus {
+    outline: none;
+    border-color: #FEFBF2; /* Cor da borda ao focar */
+}
+
+.tabela-titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: #FEFBF2;
+    margin-bottom: 20px;
+    margin-top: 30px; /* Espaço superior opcional */
+    width: 100%; /* Certifique-se de que ocupe toda a largura do contêiner */
+    display: block; /* título em linha separada */
+}
+
+.botoes-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px; /* espaço entre os botões */
+}
+
+.botoes-container .btn {
+    background-color: #FEFBF2;
+    color: #1F1F1F;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.botoes-container .btn:hover {
+    background-color: #1F1F1F;
+    color: #FEFBF2;
+    border: 2px solid #FEFBF2;
+}
+
+.btn-disabled {
+    background-color: rgba(190, 190, 190, 0.8) !important;
+    color: #6c757d !important;
+    cursor: not-allowed !important;
+    pointer-events: none;
+    border: 2px solid rgba(211, 211, 211, 0.8) !important;
+    border-radius: 30px;
+}
+
+
+/*******************************************TABELAS SIMPLEX*******************************************/
+
+/* Contêiner para tabelas do Simplex */
+.table-container {
+    
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #282828; /* Fundo escuro para contraste */
+    box-shadow: 6px 4px 4px 6px rgba(0, 0, 0, 0.212); /* Sombra suave */
+    width: 85%;
+    max-width: 900px;
+    max-height: 580px;
+    overflow-x: auto; /* Suporte para rolagem horizontal */
+    text-align: center;
+}
+
+/* Estilo base da tabela */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    color: #FEFBF2;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+/* Cabeçalho da tabela */
+.table th {
+    background-color: #333; /* Fundo para cabeçalhos */
+    color: rgb(255, 255, 255); 
+    text-transform: uppercase;
+    padding: 12px 15px;
+    border: 1px solid #555; /* Borda clara */
+    font-weight: bold;
+}
+
+
+/* Células do corpo da tabela */
+.table td {
+    padding: 10px;
+    border: 1px solid #555;
+    color: #FEFBF2; /* Cor padrão das células */
+    background-color: #1F1F1F;; /* Fundo padrão */
+    
+}
+
+/* Destaque para células da linha pivô */
+.table td.linha-highlight {
+    background-color: rgba(24, 202, 178, 0.13); /* Fundo mais suave */
+}
+
+/* Destaque para células da coluna pivô */
+.table td.coluna-highlight {
+    background-color: rgba(24, 202, 178, 0.13); /* Fundo mais suave */
+}
+
+/* Responsividade */
+.table-container::-webkit-scrollbar {
+    height: 4px;
+    width: 5px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*******************************************TÍTULO DAS TABELAS*******************************************/
+
+/* Título acima de cada tabela */
+.tabela-titulo {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/*******************************************RESULTADO*******************************************/
+/* Contêiner para os resultados */
+.resultado-container {
+    background-color: #2A2A2A;
+    color: #FEFBF2;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    height: auto;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Título do resultado */
+.resultado-titulo {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Valor de Z */
+.resultado-valor {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Lista de variáveis */
+.variaveis-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.variavel-item {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.variavel-item strong {
+    color: #ffffff;
+}
+
+
+/*******************************************GRAFICO*******************************************/
+h3{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Contêiner para alinhar os botões lado a lado */
+.botoes-container {
+    display: flex;
+    gap: 20px; /* Espaço entre os botões */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    margin-top: 20px; /* Espaço superior */
+}
+
+/* Estilos base para ambos os botões */
+.novobtn {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 180px;
+    display: inline-block;
+    font-weight: bold;
+    border: 2px solid transparent;
+}
+
+.modificarbtn {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 245px;
+    display: inline-block;
+    font-weight: bold;
+    border: 2px solid transparent;
+}
+
+/* Botão "Novo Problema" - Estilo discreto */
+.btn-novo-problema {
+    background-color: #FEFBF2; /* Cinza claro */
+    color: #1F1F1F; /* Cor de texto escura */
+}
+
+.btn-novo-problema:hover {
+    background-color: #1F1F1F; /* Cinza um pouco mais escuro ao passar o mouse */
+    color: #FEFBF2;
+    border: 2px solid #FEFBF2;
+}
+
+/* Botão "Modificar Problema" - Estilo mais destacado */
+.btn-modificar-problema {
+    background-color: #FEFBF2; /* Cor de fundo creme */
+    color: #1F1F1F; /* Cor de texto escura */
+    cursor: pointer;
+}
+
+.btn-modificar-problema:hover {
+    background-color: #1F1F1F; 
+    color: #FEFBF2;
+    border: 2px solid #FEFBF2;
+}
